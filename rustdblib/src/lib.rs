@@ -1,7 +1,16 @@
+mod key;
+
+pub fn init() {
+    println!("Hello from init!");
+}
+
 #[cfg(test)]
 mod tests {
+    use super::*;
+
     #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
+    fn init_runs() {
+        init();
+        assert!(true);
     }
 }
